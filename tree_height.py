@@ -24,57 +24,44 @@ def compute_height(n, parents):
     b = [None] * n
     c = []
     while x != n:
-        print("turpina")   
-        print(list[i])
+        #print(list[i])
         
-        if b[i] != 1 :
-            b[i] = 1
-            print("vel nav parbaudits")
+        if b[i] != 1:
             c.append(i)
-            print(c)
+            #print(c)
             for item in c:
                 a[item] = a[item] + 1
                 
         else: 
-            print("ir parbaudits")
-            #print(i) 
-            print(c)
+            #print(i)
             if c:
-                print("nonaca te")
-                print(i)
-                a[c[-1]] =a[i]  + 1
-            else: a[list.index(i)] =a[i]  + 1  
-            c = []
-        
-        print(a)
-        print(b)
+                a[c[-1]] =a[i]  +1
+            else: a[list.index(i)] =a[i]  +1
+            c =[]   
+        #print(a)
+        b[i] = 1
         #a[i] = 0
+        k = k + 1
         
         i = list[i]
 
         if i == -1:
-            print (" i ir -1")
-            x = 0
-            k = 0
             
+            x = 0
+            j = list.index(i)
+
+            k=0
+            c = []
             for item in b:
                 if item == None:
                     i = b.index(item)  
                     break
-                else: 
-                    x = x + 1
-            if x == n and i == -1:
-                print("ff")
-                print(c)
-                print(i)
-                for item in c:
-                    j = list.index(i)
-                    a[item] = a[item] + 1
-            else: c = []
-    print("Apmeklejums")
-    print(b)
-    print("a")
-    print(a)
+                else: x = x + 1
+
+    #print("Apmeklejums")
+    #print(b)
+    #print("a")
+    #print(a)
 
     max_height = 0
     for item in a:
