@@ -30,7 +30,7 @@ def compute_height(n, parents):
         if b[i] != 1 :
             #print("b nav registrets ampeklejums sim tapec pievieno masivam c indeksu un palielina a ")
             c.append(i)
-            print(c)
+            #print(c)
             for item in c:
                 a[item] = a[item] + 1
                 
@@ -39,13 +39,11 @@ def compute_height(n, parents):
             #print(i)
             if c:
                 a[c[-1]] =a[i]  + 1
-            else: a[list.index(i)] =a[i]  +1
-            #c =[]   
-        print(a)
-        print(b)
+            else: a[list.index(i)] =a[i]  +1  
+       # print(a)
+       # print(b)
         b[i] = 1
         #a[i] = 0
-        
         
         i = list[i]
 
@@ -65,10 +63,10 @@ def compute_height(n, parents):
                 for item in c:
                     a[item] = a[item] + 1
             else: c = []
-    print("Apmeklejums")
-    print(b)
-    print("a")
-    print(a)
+    #print("Apmeklejums")
+    #print(b)
+    #print("a")
+    #print(a)
 
     max_height = 0
     for item in a:
@@ -76,7 +74,6 @@ def compute_height(n, parents):
             max_height = item
 
     return max_height
-
 
 def main():
     # implement input form keyboard and from files
