@@ -14,9 +14,10 @@ def compute_height(n, parents):
         p_int = int(p_str)
         list.append(p_int)
     #print(list)
-    #print
+
     i = 0
     x = 0
+    k = 0
     a =[]
     for index in range(0, n):
         a.insert(index,0)
@@ -48,6 +49,7 @@ def compute_height(n, parents):
 
         if i == -1:
             x = 0
+            k = 0
             
             for item in b:
                 if item == None:
