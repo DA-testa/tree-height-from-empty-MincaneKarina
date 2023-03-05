@@ -13,29 +13,28 @@ def compute_height(n, parents):
     for p_str in parents.split():
         p_int = int(p_str)
         list.append(p_int)
-    print(list)
-
+    #print(list)
+    #print
     i = 0
     x = 0
-    k = 0
     a =[]
     for index in range(0, n):
         a.insert(index,0)
     b = [None] * n
     c = []
     while x != n:
-        #print("visi b vel anv aizpildititi tapec turpina")
-        print(list[i])
+        
+        #print(list[i])
         
         if b[i] != 1 :
-            #print("b nav registrets ampeklejums sim tapec pievieno masivam c indeksu un palielina a ")
+            
             c.append(i)
             #print(c)
             for item in c:
                 a[item] = a[item] + 1
                 
         else: 
-            #print("b ir jau apskatits tapec")
+            
             #print(i)
             if c:
                 a[c[-1]] =a[i]  + 1
@@ -48,10 +47,7 @@ def compute_height(n, parents):
         i = list[i]
 
         if i == -1:
-            #print("tindekss ir nulle")
             x = 0
-
-            k=0
             
             for item in b:
                 if item == None:
