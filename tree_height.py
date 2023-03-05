@@ -28,6 +28,7 @@ def compute_height(n, parents):
         print(list[i])
         
         if b[i] != 1 :
+            b[i] = 1
             print("vel nav parbaudits")
             c.append(i)
             print(c)
@@ -44,7 +45,7 @@ def compute_height(n, parents):
                 a[c[-1]] =a[i]  + 1
             else: a[list.index(i)] =a[i]  + 1  
             c = []
-        b[i] = 1
+        
         print(a)
         print(b)
         #a[i] = 0
