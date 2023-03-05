@@ -17,39 +17,27 @@ def compute_height(n, parents):
 
     i = 0
     x = 0
-    k = 0
     a =[]
     for index in range(0, n):
         a.insert(index,0)
     b = [None] * n
     c = []
     while x != n:
-        
-        #print(list[i])
-        
         if b[i] != 1 :
-            
             c.append(i)
-            #print(c)
             for item in c:
                 a[item] = a[item] + 1
                 
         else: 
-            
-            #print(i)
             if c:
                 a[c[-1]] =a[i]  + 1
-            else: a[list.index(i)] =a[i]  +1  
-       # print(a)
-       # print(b)
+            else: a[list.index(i)] =a[i] + 1  
         b[i] = 1
-        #a[i] = 0
         
         i = list[i]
 
         if i == -1:
             x = 0
-            k = 0
             
             for item in b:
                 if item == None:
@@ -61,10 +49,6 @@ def compute_height(n, parents):
                 for item in c:
                     a[item] = a[item] + 1
             else: c = []
-    #print("Apmeklejums")
-    #print(b)
-    #print("a")
-    #print(a)
 
     max_height = 0
     for item in a:
